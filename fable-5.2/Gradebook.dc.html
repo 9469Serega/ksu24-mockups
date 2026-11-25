@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KSU24 — залікова книжка</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1E3A8A}a:hover{color:#0F2042}
+a:focus-visible,button:focus-visible{outline:3px solid #1E3A8A;outline-offset:2px}
+.cta:hover{background:#D97706 !important}
+.nav-item:hover{background:#E2E8F0}
+.gb{width:100%;min-width:940px;border-collapse:collapse}
+.gb th,.gb td{padding:14px 16px;text-align:left;vertical-align:middle;border-top:1px solid #CBD5E1}
+.gb th:first-child{padding-left:24px}
+.gb td:last-child,.gb thead th:last-child{padding-right:24px;white-space:nowrap}
+.gb thead th{font-size:14px;font-weight:600;color:#475569;background:#F8FAFC;white-space:nowrap}
+.gb tbody th{font-weight:600}
+.gb .m{color:#475569}
+</style>
+</helmet>
+<div style="min-height: 100vh; display: flex; flex-direction: column; background: #F8FAFC; color: #1E293B; font-family: Montserrat, Inter, Roboto, 'Open Sans', system-ui, 'Segoe UI', Arial, sans-serif; font-size: 16px; line-height: 1.5">
+
+<header style="background: #FFFFFF; border-bottom: 1px solid #CBD5E1">
+<div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 10px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 24px">
+<a href="Cabinet.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; text-decoration: none; color: #1E3A8A">
+<span role="img" aria-label="Місце для емблеми ХДУ" style="width: 44px; height: 44px; border-radius: 999px; background: #DBEAFE; color: #1E3A8A; display: flex; align-items: center; justify-content: center; flex-shrink: 0">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 9 12 5 2 9l10 4 10-4v6"></path><path d="M6 10.6V16a6 3 0 0 0 12 0v-5.4"></path></svg>
+</span>
+<span style="display: flex; flex-direction: column; line-height: 1.25">
+<span style="font-size: 20px; font-weight: 700; color: #1E3A8A">KSU24</span>
+<span style="font-size: 14px; color: #475569">Херсонський державний університет</span>
+</span>
+</a>
+<div style="display: flex; align-items: center; gap: 16px">
+<button type="button" aria-label="Сповіщення, 2 нових" style="position: relative; width: 44px; height: 44px; flex-shrink: 0; border: 1px solid #475569; border-radius: 8px; background: #FFFFFF; color: #1E293B; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3H4a4 4 0 0 0 2-3v-3a7 7 0 0 1 4-6"></path><path d="M9 17v1a3 3 0 0 0 6 0v-1"></path></svg>
+<span aria-hidden="true" style="position: absolute; top: -8px; right: -8px; min-width: 22px; height: 22px; box-sizing: border-box; padding: 0 4px; border-radius: 999px; background: #1E3A8A; color: #FFFFFF; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center">2</span>
+</button>
+<div style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 44px; height: 44px; flex-shrink: 0; border-radius: 999px; background: #DBEAFE; color: #0F2042; font-weight: 600; display: flex; align-items: center; justify-content: center">ОК</span>
+<span style="display: flex; flex-direction: column; line-height: 1.3">
+<span style="font-weight: 600">Олена Коваленко</span>
+<span style="font-size: 14px; color: #475569">Група 241 · 3 курс</span>
+</span>
+</div>
+</div>
+</div>
+</header>
+
+<div style="width: 100%; max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 24px; display: flex; flex-wrap: wrap; align-items: flex-start; gap: 24px">
+
+<nav aria-label="Розділи кабінету" style="flex: 1 1 264px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 12px; display: flex; flex-wrap: wrap; gap: 4px 8px">
+<a class="nav-item" href="Cabinet.dc.html" style="flex: 1 1 160px; box-sizing: border-box; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #1E293B; font-weight: 500; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M5 12H3l9-9 9 9h-2"></path><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"></path><path d="M9 21v-6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6"></path></svg>
+Кабінет</a>
+<a class="nav-item" href="Cabinet.dc.html" style="flex: 1 1 160px; box-sizing: border-box; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #1E293B; font-weight: 500; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"></path><path d="M16 3v4"></path><path d="M8 3v4"></path><path d="M4 11h16"></path><path d="M8 15h2v2H8z"></path></svg>
+Розклад</a>
+<a class="nav-item" href="Gradebook.dc.html" aria-current="page" style="flex: 1 1 160px; box-sizing: border-box; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; background: #DBEAFE; color: #0F2042; font-weight: 600; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M19 4v16H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12z"></path><path d="M19 16H7a2 2 0 0 0-2 2"></path><path d="M9 8h6"></path></svg>
+Залікова книжка</a>
+<a class="nav-item" href="#osvitnia-prohrama" style="flex: 1 1 160px; box-sizing: border-box; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #1E293B; font-weight: 500; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M22 9 12 5 2 9l10 4 10-4v6"></path><path d="M6 10.6V16a6 3 0 0 0 12 0v-5.4"></path></svg>
+Освітня програма</a>
+<a class="nav-item" href="Documents.dc.html" style="flex: 1 1 160px; box-sizing: border-box; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #1E293B; font-weight: 500; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"></path><path d="M9 9h1"></path><path d="M9 13h6"></path><path d="M9 17h6"></path></svg>
+Документообіг</a>
+<a class="nav-item" href="Cabinet.dc.html" style="flex: 1 1 160px; box-sizing: border-box; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #1E293B; font-weight: 500; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M8 9h8"></path><path d="M8 13h6"></path><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3h-5l-5 3v-3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h12z"></path></svg>
+Чат</a>
+<a class="nav-item" href="#pidpys-pdf" style="flex: 1 1 160px; box-sizing: border-box; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #1E293B; font-weight: 500; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0"><path d="M4 20h4L18.5 9.5a2.828 2.828 0 1 0-4-4L4 16v4"></path><path d="M13.5 6.5l4 4"></path></svg>
+Підпис PDF</a>
+</nav>
+
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 24px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h1 style="margin: 0; font-size: clamp(1.5625rem, 1.15rem + 1vw, 1.875rem); font-weight: 700; line-height: 1.2; color: #1E3A8A">Залікова книжка</h1>
+<p style="margin: 0; color: #475569">Олена Коваленко · Комп’ютерні науки, бакалавр · група 241</p>
+</div>
+<a class="cta" href="#vytiah" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; box-sizing: border-box; padding: 0 24px; border-radius: 8px; background: #F59E0B; color: #1E293B; font-weight: 600; text-decoration: none">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path><path d="M7 11l5 5 5-5"></path><path d="M12 4v12"></path></svg>
+Завантажити витяг</a>
+</div>
+
+<div role="tablist" aria-label="Семестр" style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{ tabs }}" as="t" hint-placeholder-count="5">
+<button type="button" role="tab" aria-selected="{{ t.selected }}" onClick="{{ t.pick }}" style="min-height: 44px; box-sizing: border-box; padding: 0 16px; border: 1px solid {{t.border}}; border-radius: 8px; background: {{t.bg}}; color: {{t.fg}}; font-family: inherit; font-size: 16px; font-weight: 600; cursor: pointer">{{ t.label }}</button>
+</sc-for>
+</div>
+
+<sc-if value="{{ s1 }}" hint-placeholder-val="{{ false }}">
+<div role="tabpanel" aria-label="1 семестр" style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px">
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Середній бал</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">88,5</span>
+<span style="font-size: 14px; color: #475569">за 100-бальною шкалою</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Кредити ЄКТС</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">30</span>
+<span style="font-size: 14px; color: #475569">за семестр</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Складено дисциплін</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">6 із 6</span>
+<span style="font-size: 14px; color: #475569">заборгованостей немає</span>
+</div>
+</div>
+<section aria-labelledby="t1" style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; overflow: hidden">
+<div style="padding: 20px 24px 16px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px">
+<h2 id="t1" style="margin: 0; font-size: clamp(1.3125rem, 1.05rem + 0.7vw, 1.5625rem); font-weight: 600; line-height: 1.25; color: #1E3A8A">Результати за 1 семестр</h2>
+<span style="font-size: 14px; color: #475569">вересень 2024 — січень 2025</span>
+</div>
+<div style="overflow-x: auto">
+<dc-t-table class="gb" aria-labelledby="t1">
+<dc-t-thead><dc-t-tr><dc-t-th scope="col">Дисципліна</dc-t-th><dc-t-th scope="col">Кредити ЄКТС</dc-t-th><dc-t-th scope="col">Контроль</dc-t-th><dc-t-th scope="col">Бали</dc-t-th><dc-t-th scope="col">Оцінка ЄКТС</dc-t-th><dc-t-th scope="col">Національна шкала</dc-t-th><dc-t-th scope="col">Викладач</dc-t-th><dc-t-th scope="col">Дата</dc-t-th></dc-t-tr></dc-t-thead>
+<dc-t-tbody>
+<dc-t-tr><dc-t-th scope="row">Вища математика</dc-t-th><dc-t-td>6</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>86</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">B</span></dc-t-td><dc-t-td>добре</dc-t-td><dc-t-td class="m">доц. Мельник О. В.</dc-t-td><dc-t-td>14.01.2025</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Основи програмування</dc-t-th><dc-t-td>7</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>93</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>відмінно</dc-t-td><dc-t-td class="m">проф. Савчук І. П.</dc-t-td><dc-t-td>17.01.2025</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Дискретна математика</dc-t-th><dc-t-td>5</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>78</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #E2E8F0; color: #1E293B">C</span></dc-t-td><dc-t-td>добре</dc-t-td><dc-t-td class="m">доц. Гнатюк Л. С.</dc-t-td><dc-t-td>21.01.2025</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Іноземна мова</dc-t-th><dc-t-td>4</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>91</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>зараховано</dc-t-td><dc-t-td class="m">ст. викл. Бойко Н. А.</dc-t-td><dc-t-td>20.12.2024</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Історія України та української культури</dc-t-th><dc-t-td>4</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>88</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">B</span></dc-t-td><dc-t-td>зараховано</dc-t-td><dc-t-td class="m">доц. Кравець В. Д.</dc-t-td><dc-t-td>18.12.2024</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Вступ до спеціальності</dc-t-th><dc-t-td>4</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>95</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>зараховано</dc-t-td><dc-t-td class="m">доц. Романюк С. В.</dc-t-td><dc-t-td>16.12.2024</dc-t-td></dc-t-tr>
+</dc-t-tbody>
+</dc-t-table>
+</div>
+</section>
+</div>
+</sc-if>
+
+<sc-if value="{{ s2 }}" hint-placeholder-val="{{ false }}">
+<div role="tabpanel" aria-label="2 семестр" style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px">
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Середній бал</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">87,5</span>
+<span style="font-size: 14px; color: #475569">за 100-бальною шкалою</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Кредити ЄКТС</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">30</span>
+<span style="font-size: 14px; color: #475569">за семестр</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Складено дисциплін</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">6 із 6</span>
+<span style="font-size: 14px; color: #475569">заборгованостей немає</span>
+</div>
+</div>
+<section aria-labelledby="t2" style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; overflow: hidden">
+<div style="padding: 20px 24px 16px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px">
+<h2 id="t2" style="margin: 0; font-size: clamp(1.3125rem, 1.05rem + 0.7vw, 1.5625rem); font-weight: 600; line-height: 1.25; color: #1E3A8A">Результати за 2 семестр</h2>
+<span style="font-size: 14px; color: #475569">лютий — червень 2025</span>
+</div>
+<div style="overflow-x: auto">
+<dc-t-table class="gb" aria-labelledby="t2">
+<dc-t-thead><dc-t-tr><dc-t-th scope="col">Дисципліна</dc-t-th><dc-t-th scope="col">Кредити ЄКТС</dc-t-th><dc-t-th scope="col">Контроль</dc-t-th><dc-t-th scope="col">Бали</dc-t-th><dc-t-th scope="col">Оцінка ЄКТС</dc-t-th><dc-t-th scope="col">Національна шкала</dc-t-th><dc-t-th scope="col">Викладач</dc-t-th><dc-t-th scope="col">Дата</dc-t-th></dc-t-tr></dc-t-thead>
+<dc-t-tbody>
+<dc-t-tr><dc-t-th scope="row">Алгоритми та структури даних</dc-t-th><dc-t-td>7</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>90</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>відмінно</dc-t-td><dc-t-td class="m">проф. Савчук І. П.</dc-t-td><dc-t-td>10.06.2025</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Лінійна алгебра та аналітична геометрія</dc-t-th><dc-t-td>5</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>74</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #E2E8F0; color: #1E293B">C</span></dc-t-td><dc-t-td>добре</dc-t-td><dc-t-td class="m">доц. Мельник О. В.</dc-t-td><dc-t-td>13.06.2025</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Архітектура комп’ютерів</dc-t-th><dc-t-td>5</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>82</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">B</span></dc-t-td><dc-t-td>добре</dc-t-td><dc-t-td class="m">доц. Романюк С. В.</dc-t-td><dc-t-td>17.06.2025</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Іноземна мова</dc-t-th><dc-t-td>4</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>89</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">B</span></dc-t-td><dc-t-td>зараховано</dc-t-td><dc-t-td class="m">ст. викл. Бойко Н. А.</dc-t-td><dc-t-td>28.05.2025</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Українська мова за професійним спрямуванням</dc-t-th><dc-t-td>4</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>94</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>зараховано</dc-t-td><dc-t-td class="m">доц. Литвин О. П.</dc-t-td><dc-t-td>26.05.2025</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Навчальна практика</dc-t-th><dc-t-td>5</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>96</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>зараховано</dc-t-td><dc-t-td class="m">ст. викл. Зінченко Т. М.</dc-t-td><dc-t-td>20.06.2025</dc-t-td></dc-t-tr>
+</dc-t-tbody>
+</dc-t-table>
+</div>
+</section>
+</div>
+</sc-if>
+
+<sc-if value="{{ s3 }}" hint-placeholder-val="{{ false }}">
+<div role="tabpanel" aria-label="3 семестр" style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px">
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Середній бал</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">84,8</span>
+<span style="font-size: 14px; color: #475569">за 100-бальною шкалою</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Кредити ЄКТС</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">30</span>
+<span style="font-size: 14px; color: #475569">за семестр</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Складено дисциплін</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">6 із 6</span>
+<span style="font-size: 14px; color: #475569">заборгованостей немає</span>
+</div>
+</div>
+<section aria-labelledby="t3" style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; overflow: hidden">
+<div style="padding: 20px 24px 16px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px">
+<h2 id="t3" style="margin: 0; font-size: clamp(1.3125rem, 1.05rem + 0.7vw, 1.5625rem); font-weight: 600; line-height: 1.25; color: #1E3A8A">Результати за 3 семестр</h2>
+<span style="font-size: 14px; color: #475569">вересень 2025 — січень 2026</span>
+</div>
+<div style="overflow-x: auto">
+<dc-t-table class="gb" aria-labelledby="t3">
+<dc-t-thead><dc-t-tr><dc-t-th scope="col">Дисципліна</dc-t-th><dc-t-th scope="col">Кредити ЄКТС</dc-t-th><dc-t-th scope="col">Контроль</dc-t-th><dc-t-th scope="col">Бали</dc-t-th><dc-t-th scope="col">Оцінка ЄКТС</dc-t-th><dc-t-th scope="col">Національна шкала</dc-t-th><dc-t-th scope="col">Викладач</dc-t-th><dc-t-th scope="col">Дата</dc-t-th></dc-t-tr></dc-t-thead>
+<dc-t-tbody>
+<dc-t-tr><dc-t-th scope="row">Об’єктно-орієнтоване програмування</dc-t-th><dc-t-td>7</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>92</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>відмінно</dc-t-td><dc-t-td class="m">доц. Романюк С. В.</dc-t-td><dc-t-td>13.01.2026</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Теорія ймовірностей і математична статистика</dc-t-th><dc-t-td>6</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>68</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #E2E8F0; color: #1E293B">D</span></dc-t-td><dc-t-td>задовільно</dc-t-td><dc-t-td class="m">доц. Гнатюк Л. С.</dc-t-td><dc-t-td>16.01.2026</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Операційні системи</dc-t-th><dc-t-td>6</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>85</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">B</span></dc-t-td><dc-t-td>добре</dc-t-td><dc-t-td class="m">проф. Савчук І. П.</dc-t-td><dc-t-td>20.01.2026</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Іноземна мова</dc-t-th><dc-t-td>4</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>90</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>зараховано</dc-t-td><dc-t-td class="m">ст. викл. Бойко Н. А.</dc-t-td><dc-t-td>19.12.2025</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Філософія</dc-t-th><dc-t-td>4</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>81</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #E2E8F0; color: #1E293B">C</span></dc-t-td><dc-t-td>зараховано</dc-t-td><dc-t-td class="m">доц. Кравець В. Д.</dc-t-td><dc-t-td>17.12.2025</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Основи вебдизайну</dc-t-th><dc-t-td>3</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>93</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>зараховано</dc-t-td><dc-t-td class="m">ст. викл. Зінченко Т. М.</dc-t-td><dc-t-td>15.12.2025</dc-t-td></dc-t-tr>
+</dc-t-tbody>
+</dc-t-table>
+</div>
+</section>
+</div>
+</sc-if>
+
+<sc-if value="{{ s4 }}" hint-placeholder-val="{{ true }}">
+<div role="tabpanel" aria-label="4 семестр" style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px">
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Середній бал</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">87,5</span>
+<span style="font-size: 14px; color: #475569">за 100-бальною шкалою</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Кредити ЄКТС</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">30</span>
+<span style="font-size: 14px; color: #475569">за семестр</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Складено дисциплін</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">6 із 6</span>
+<span style="font-size: 14px; color: #475569">заборгованостей немає</span>
+</div>
+</div>
+<section aria-labelledby="t4" style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; overflow: hidden">
+<div style="padding: 20px 24px 16px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px">
+<h2 id="t4" style="margin: 0; font-size: clamp(1.3125rem, 1.05rem + 0.7vw, 1.5625rem); font-weight: 600; line-height: 1.25; color: #1E3A8A">Результати за 4 семестр</h2>
+<span style="font-size: 14px; color: #475569">лютий — червень 2026</span>
+</div>
+<div style="overflow-x: auto">
+<dc-t-table class="gb" aria-labelledby="t4">
+<dc-t-thead><dc-t-tr><dc-t-th scope="col">Дисципліна</dc-t-th><dc-t-th scope="col">Кредити ЄКТС</dc-t-th><dc-t-th scope="col">Контроль</dc-t-th><dc-t-th scope="col">Бали</dc-t-th><dc-t-th scope="col">Оцінка ЄКТС</dc-t-th><dc-t-th scope="col">Національна шкала</dc-t-th><dc-t-th scope="col">Викладач</dc-t-th><dc-t-th scope="col">Дата</dc-t-th></dc-t-tr></dc-t-thead>
+<dc-t-tbody>
+<dc-t-tr><dc-t-th scope="row">Чисельні методи</dc-t-th><dc-t-td>5</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>76</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #E2E8F0; color: #1E293B">C</span></dc-t-td><dc-t-td>добре</dc-t-td><dc-t-td class="m">доц. Гнатюк Л. С.</dc-t-td><dc-t-td>09.06.2026</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Програмування мобільних застосунків</dc-t-th><dc-t-td>6</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>91</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>відмінно</dc-t-td><dc-t-td class="m">ст. викл. Зінченко Т. М.</dc-t-td><dc-t-td>12.06.2026</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Системний аналіз</dc-t-th><dc-t-td>5</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>83</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">B</span></dc-t-td><dc-t-td>добре</dc-t-td><dc-t-td class="m">доц. Мельник О. В.</dc-t-td><dc-t-td>16.06.2026</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Іноземна мова</dc-t-th><dc-t-td>4</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>92</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>зараховано</dc-t-td><dc-t-td class="m">ст. викл. Бойко Н. А.</dc-t-td><dc-t-td>27.05.2026</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Курсова робота з програмування</dc-t-th><dc-t-td>4</dc-t-td><dc-t-td>Диференційований залік</dc-t-td><dc-t-td>88</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">B</span></dc-t-td><dc-t-td>добре</dc-t-td><dc-t-td class="m">доц. Романюк С. В.</dc-t-td><dc-t-td>29.05.2026</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Навчальна практика</dc-t-th><dc-t-td>6</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>95</dc-t-td><dc-t-td><span style="display: inline-block; min-width: 20px; padding: 2px 10px; border-radius: 999px; text-align: center; font-weight: 600; background: #DBEAFE; color: #0F2042">A</span></dc-t-td><dc-t-td>зараховано</dc-t-td><dc-t-td class="m">ст. викл. Зінченко Т. М.</dc-t-td><dc-t-td>19.06.2026</dc-t-td></dc-t-tr>
+</dc-t-tbody>
+</dc-t-table>
+</div>
+</section>
+</div>
+</sc-if>
+
+<sc-if value="{{ s5 }}" hint-placeholder-val="{{ false }}">
+<div role="tabpanel" aria-label="5 семестр, поточний" style="display: flex; flex-direction: column; gap: 24px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px">
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Середній бал</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">—</span>
+<span style="font-size: 14px; color: #475569">з’явиться після сесії</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Кредити ЄКТС</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">30</span>
+<span style="font-size: 14px; color: #475569">за семестр</span>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 20px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 14px; color: #475569">Складено дисциплін</span>
+<span style="font-size: 25px; font-weight: 700; line-height: 1.2; color: #1E3A8A">0 із 6</span>
+<span style="font-size: 14px; color: #475569">семестр триває</span>
+</div>
+</div>
+<section aria-labelledby="t5" style="background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; overflow: hidden">
+<div style="padding: 20px 24px 16px; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px">
+<h2 id="t5" style="margin: 0; font-size: clamp(1.3125rem, 1.05rem + 0.7vw, 1.5625rem); font-weight: 600; line-height: 1.25; color: #1E3A8A">Результати за 5 семестр</h2>
+<span style="font-size: 14px; color: #475569">вересень 2026 — січень 2027 · бали проміжні</span>
+</div>
+<div style="overflow-x: auto">
+<dc-t-table class="gb" aria-labelledby="t5">
+<dc-t-thead><dc-t-tr><dc-t-th scope="col">Дисципліна</dc-t-th><dc-t-th scope="col">Кредити ЄКТС</dc-t-th><dc-t-th scope="col">Контроль</dc-t-th><dc-t-th scope="col">Бали</dc-t-th><dc-t-th scope="col">Оцінка ЄКТС</dc-t-th><dc-t-th scope="col">Національна шкала</dc-t-th><dc-t-th scope="col">Викладач</dc-t-th><dc-t-th scope="col">Дата</dc-t-th></dc-t-tr></dc-t-thead>
+<dc-t-tbody>
+<dc-t-tr><dc-t-th scope="row">Бази даних</dc-t-th><dc-t-td>7</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>52</dc-t-td><dc-t-td>—</dc-t-td><dc-t-td><span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: 999px; font-size: 14px; font-weight: 600; background: #FEF3C7; color: #451A03"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>Триває</span></dc-t-td><dc-t-td class="m">доц. Мельник О. В.</dc-t-td><dc-t-td>—</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Вебтехнології</dc-t-th><dc-t-td>6</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>57</dc-t-td><dc-t-td>—</dc-t-td><dc-t-td><span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: 999px; font-size: 14px; font-weight: 600; background: #FEF3C7; color: #451A03"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>Триває</span></dc-t-td><dc-t-td class="m">ст. викл. Зінченко Т. М.</dc-t-td><dc-t-td>—</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Комп’ютерні мережі</dc-t-th><dc-t-td>6</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>49</dc-t-td><dc-t-td>—</dc-t-td><dc-t-td><span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: 999px; font-size: 14px; font-weight: 600; background: #FEF3C7; color: #451A03"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>Триває</span></dc-t-td><dc-t-td class="m">доц. Романюк С. В.</dc-t-td><dc-t-td>—</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Методи оптимізації</dc-t-th><dc-t-td>4</dc-t-td><dc-t-td>Екзамен</dc-t-td><dc-t-td>44</dc-t-td><dc-t-td>—</dc-t-td><dc-t-td><span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: 999px; font-size: 14px; font-weight: 600; background: #FEF3C7; color: #451A03"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>Триває</span></dc-t-td><dc-t-td class="m">доц. Гнатюк Л. С.</dc-t-td><dc-t-td>—</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Іноземна мова</dc-t-th><dc-t-td>4</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>61</dc-t-td><dc-t-td>—</dc-t-td><dc-t-td><span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: 999px; font-size: 14px; font-weight: 600; background: #FEF3C7; color: #451A03"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>Триває</span></dc-t-td><dc-t-td class="m">ст. викл. Бойко Н. А.</dc-t-td><dc-t-td>—</dc-t-td></dc-t-tr>
+<dc-t-tr><dc-t-th scope="row">Проєктний практикум</dc-t-th><dc-t-td>3</dc-t-td><dc-t-td>Залік</dc-t-td><dc-t-td>58</dc-t-td><dc-t-td>—</dc-t-td><dc-t-td><span style="display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: 999px; font-size: 14px; font-weight: 600; background: #FEF3C7; color: #451A03"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>Триває</span></dc-t-td><dc-t-td class="m">проф. Савчук І. П.</dc-t-td><dc-t-td>—</dc-t-td></dc-t-tr>
+</dc-t-tbody>
+</dc-t-table>
+</div>
+</section>
+</div>
+</sc-if>
+
+<p id="vytiah" style="margin: 0; font-size: 14px; color: #475569">Шкала ЄКТС: A — 90–100, B — 82–89, C — 74–81, D — 64–73, E — 60–63, FX — 35–59, F — 0–34 бали.</p>
+
+</main>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1120}}'>
+class Component extends DCLogic {
+renderVals() {
+const current = (this.state && this.state.sem) || 4;
+const labels = ['1 семестр', '2 семестр', '3 семестр', '4 семестр', '5 семестр, поточний'];
+const tabs = labels.map((label, i) => {
+const id = i + 1;
+const selected = id === current;
+return {
+label: label,
+selected: selected,
+bg: selected ? '#1E3A8A' : '#FFFFFF',
+fg: selected ? '#FFFFFF' : '#1E293B',
+border: selected ? '#1E3A8A' : '#475569',
+pick: () => this.setState({ sem: id })
+};
+});
+return {
+tabs: tabs,
+s1: current === 1,
+s2: current === 2,
+s3: current === 3,
+s4: current === 4,
+s5: current === 5
+};
+}
+}
+</script>
+</body>
+</html>

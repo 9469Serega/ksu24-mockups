@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KSU24 — Цифрова освітня платформа університету</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8FAFC}
+.app{font-family:'Montserrat','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:16px;line-height:1.5;color:#1E293B;background:#F8FAFC;-webkit-font-smoothing:antialiased}
+.app *{box-sizing:border-box}
+.app h1,.app h2,.app h3,.app p,.app ul,.app ol,.app dl,.app dd,.app figure{margin:0}
+.app ul,.app ol{padding:0;list-style:none}
+.app h1{font-size:30px;line-height:1.25;font-weight:700;color:#1E3A8A}
+.app h2{font-size:24px;line-height:1.3;font-weight:600;color:#1E3A8A}
+.app h3{font-size:18px;line-height:1.35;font-weight:500;color:#1E3A8A}
+.app a{color:#1E3A8A;text-underline-offset:3px}
+.app :focus-visible{outline:3px solid #1E3A8A;outline-offset:2px}
+.app .muted{color:#475569}
+.app .small{font-size:14px;line-height:1.45}
+.app .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.app .skip{position:absolute;left:8px;top:-72px;z-index:20;background:#FFFFFF;color:#1E3A8A;padding:12px 16px;border-radius:8px;border:2px solid #1E3A8A;font-weight:600}
+.app .skip:focus{top:8px}
+.app .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 20px;border-radius:8px;border:2px solid transparent;font-family:inherit;font-size:16px;font-weight:600;line-height:1.25;text-decoration:none;cursor:pointer;transition:background-color 200ms cubic-bezier(.2,0,0,1),border-color 200ms cubic-bezier(.2,0,0,1)}
+.app a.btn-cta,.app button.btn-cta{background:#F59E0B;border-color:#F59E0B;color:#1E293B}
+.app a.btn-cta:hover,.app button.btn-cta:hover{background:#D97706;border-color:#D97706;color:#1E293B}
+.app a.btn-sec,.app button.btn-sec{background:transparent;border-color:#1E3A8A;color:#1E3A8A}
+.app a.btn-sec:hover,.app button.btn-sec:hover{background:#DBEAFE;color:#1E3A8A}
+.app a.btn-txt,.app button.btn-txt{background:transparent;color:#1E3A8A;padding:10px 12px}
+.app a.btn-txt:hover,.app button.btn-txt:hover{background:#DBEAFE}
+.app .chip{display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:2px 10px;border-radius:999px;font-size:14px;font-weight:600;line-height:1.3;white-space:nowrap}
+.app .chip-blue{background:#DBEAFE;color:#0F2042}
+.app .chip-amber{background:#FEF3C7;color:#451A03}
+.app .chip-neutral{background:#E2E8F0;color:#1E293B}
+.app .chip-outline{background:#FFFFFF;color:#B45309;border:1px solid #B45309}
+.app .card{background:#FFFFFF;border:1px solid #CBD5E1;border-radius:12px}
+.app .shadow{box-shadow:0 1px 2px rgba(0,0,0,.30),0 2px 6px 2px rgba(0,0,0,.15)}
+.app .logo{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:#1E3A8A;font-weight:700;font-size:20px}
+.app .logo-mark{width:36px;height:36px;border-radius:8px;background:#1E3A8A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.app .logo-w,.app .topbar .logo-w{color:#FFFFFF}
+.app .logo-mark-w{background:#FFFFFF;color:#1E3A8A}
+.app .avatar{width:40px;height:40px;border-radius:999px;background:#DBEAFE;color:#0F2042;font-weight:700;font-size:14px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.app .field{width:100%;min-height:44px;padding:0 14px;border:1px solid #475569;border-radius:8px;font-family:inherit;font-size:16px;color:#1E293B;background:#FFFFFF}
+.app .field::placeholder{color:#475569;opacity:1}
+.app .field:focus{outline:3px solid #1E3A8A;outline-offset:1px;border-color:#1E3A8A}
+.app .lbl{display:block;font-size:14px;font-weight:600;color:#1E293B;margin-bottom:6px}
+@media (prefers-reduced-motion:reduce){.app *{transition:none!important;animation:none!important}}
+
+.app .wrap{max-width:1280px;margin:0 auto;padding:0 32px;width:100%}
+.app .site-head{background:#FFFFFF;border-bottom:1px solid #CBD5E1}
+.app .site-head .in{max-width:1280px;margin:0 auto;padding:12px 32px;min-height:72px;display:flex;align-items:center;gap:24px}
+.app .hd-right{margin-left:auto;display:flex;align-items:center;gap:8px}
+.app .nav-inline{display:flex;gap:4px;margin-right:8px}
+.app .nav-inline a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border-radius:8px;text-decoration:none;font-weight:500;color:#1E293B;transition:background-color 200ms cubic-bezier(.2,0,0,1)}
+.app .nav-inline a:hover{background:#E2E8F0}
+.app .menu-d{display:none;position:relative}
+.app .menu-d summary{list-style:none;width:44px;height:44px;border:2px solid #1E3A8A;border-radius:8px;color:#1E3A8A;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.app .menu-d summary::-webkit-details-marker{display:none}
+.app .menu-pop{position:absolute;right:0;top:52px;z-index:10;width:240px;padding:8px;background:#FFFFFF;border:1px solid #CBD5E1;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.30),0 2px 6px 2px rgba(0,0,0,.15)}
+.app .menu-pop a{display:flex;align-items:center;min-height:44px;padding:0 12px;border-radius:8px;text-decoration:none;color:#1E293B;font-weight:500}
+.app .menu-pop a:hover{background:#E2E8F0}
+.app .hero{padding:64px 0 72px}
+.app .hero-in{display:flex;flex-wrap:wrap;gap:48px;align-items:center}
+.app .hero-text{flex:1 1 440px;min-width:0}
+.app .hero-vis{flex:1 1 440px;min-width:0}
+.app .eyebrow{color:#B45309;font-weight:600;font-size:14px;margin-bottom:12px}
+.app .lead{font-size:18px;line-height:1.55;max-width:540px;margin-top:16px}
+.app .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.app .pv{border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:20px;max-width:560px;margin:0 auto}
+.app .pv-head{display:flex;align-items:center;gap:12px}
+.app .pv-name{font-weight:600;color:#1E3A8A}
+.app .pv-label{font-size:14px;font-weight:600;color:#475569;margin-bottom:8px}
+.app .pv-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #CBD5E1;font-weight:500}
+.app .pv-row .grow{flex:1;min-width:0}
+.app .pv-time{font-weight:600;color:#1E3A8A;width:48px;flex:none}
+.app .pv-score{font-weight:700;color:#1E3A8A;font-size:20px}
+.app .sec{padding:72px 0}
+.app .sec-alt{background:#FFFFFF;border-top:1px solid #CBD5E1;border-bottom:1px solid #CBD5E1}
+.app .sec-h{max-width:720px;margin-bottom:40px}
+.app .sec-h p{margin-top:12px;color:#475569}
+.app .fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
+.app .fcard{padding:28px;display:flex;flex-direction:column;gap:12px}
+.app .fcard p{color:#475569}
+.app .ficon{width:48px;height:48px;border-radius:12px;background:#DBEAFE;color:#1E3A8A;display:flex;align-items:center;justify-content:center}
+.app .steps-row{display:flex;flex-wrap:wrap;gap:16px}
+.app .scard{flex:1 1 220px;min-width:0;padding:24px;display:flex;flex-direction:column;gap:12px;background:#F8FAFC}
+.app .snum{width:40px;height:40px;border-radius:999px;background:#1E3A8A;color:#FFFFFF;font-weight:700;display:flex;align-items:center;justify-content:center}
+.app .scard ul{display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.5;color:#475569}
+.app .scard li{padding-left:16px;position:relative}
+.app .scard li::before{content:'';position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:999px;background:#1E3A8A}
+.app .band{background:#DBEAFE;border-radius:16px;padding:40px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;color:#0F2042}
+.app .band h2{color:#0F2042}
+.app .band p{margin-top:8px;max-width:520px}
+.app .band-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.app .band a.btn-sec{background:#FFFFFF}
+.app .band a.btn-sec:hover{background:#F8FAFC}
+.app .band a.lnk{color:#0F2042;font-weight:600;display:inline-flex;align-items:center;min-height:44px;padding:0 8px}
+.app .footer{background:#FFFFFF;border-top:1px solid #CBD5E1;margin-top:auto}
+.app .foot-in{display:flex;flex-wrap:wrap;gap:24px 48px;justify-content:space-between;padding-top:32px;padding-bottom:16px}
+.app .foot-links,.app .foot-contact{display:flex;flex-direction:column}
+.app .foot-links a,.app .foot-contact a{display:inline-flex;align-items:center;min-height:44px;font-weight:500}
+.app .copy{padding-bottom:24px}
+@media (max-width:760px){
+ .app h1{font-size:25px}
+ .app .wrap,.app .site-head .in{padding-left:20px;padding-right:20px}
+ .app .nav-inline{display:none}
+ .app .menu-d{display:block}
+ .app .hero{padding:40px 0 48px}
+ .app .hero-in{gap:32px}
+ .app .hero-actions .btn{flex:1 1 100%}
+ .app .sec{padding:48px 0}
+ .app .sec-h{margin-bottom:28px}
+ .app .band{padding:28px 20px}
+ .app .band-actions .btn{flex:1 1 100%}
+ .app .pv{padding:16px}
+}
+</style>
+</helmet>
+<div class="app" style="min-height:2500px;display:flex;flex-direction:column">
+<a class="skip" href="#main">Перейти до змісту</a>
+
+<header class="site-head"><div class="in"><a class="logo" href="Main.dc.html" aria-label="KSU24 — на головну"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"/><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"/></svg></span><span>KSU24</span></a>
+<div class="hd-right">
+<nav class="nav-inline" aria-label="Розділи сторінки"><a href="#features">Можливості</a><a href="#integration">Інтеграція</a><a href="#contacts">Контакти</a></nav>
+<a class="btn btn-sec" href="Login.dc.html">Увійти</a>
+<details class="menu-d"><summary aria-label="Меню розділів"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></summary>
+<ul class="menu-pop"><li><a href="#features">Можливості</a></li><li><a href="#integration">Інтеграція</a></li><li><a href="#contacts">Контакти</a></li></ul></details>
+</div></div></header>
+<main id="main" style="flex:1">
+<section class="hero"><div class="wrap hero-in">
+<div class="hero-text"><p class="eyebrow">Освітня платформа</p>
+<h1>Цифрове серце університету</h1>
+<p class="lead">Інноваційна освітня платформа для студентів, викладачів та адміністрації вашого університету.</p>
+<div class="hero-actions"><a class="btn btn-cta" href="Login.dc.html">Зареєструватися</a><a class="btn btn-sec" href="#features">Дізнатися більше</a></div></div>
+<div class="hero-vis"><div class="card shadow pv" aria-hidden="true"><div class="pv-head"><span class="avatar">ПІ</span><div><p class="pv-name">Кабінет студента</p><p class="small muted">Понеділок, 23 листопада</p></div></div><div><p class="pv-label">Розклад на сьогодні</p><div class="pv-row"><span class="pv-time">11:50</span><span class="grow">Тестування ПЗ</span><span class="chip chip-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>Зараз</span></div><div class="pv-row"><span class="pv-time">13:30</span><span class="grow">Хмарні технології</span></div></div><div><p class="pv-label">Остання оцінка</p><div class="pv-row"><span class="grow">Машинне навчання</span><span class="pv-score">92</span><span class="chip chip-blue">A</span></div></div><div><p class="pv-label">Документи</p><div class="pv-row"><span class="grow">Заява на матеріальну допомогу</span><span class="chip chip-amber"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>На погодженні</span></div></div></div></div>
+</div></section>
+<section class="sec sec-alt" id="features"><div class="wrap">
+<div class="sec-h"><h2>Можливості</h2><p>Цифрові інструменти, які спрощують навчання, адміністрування та комунікацію. Все, що потрібно — в одному місці.</p></div>
+<ul class="fgrid"><li class="card fcard"><span class="ficon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z"/><path d="M19 16h-12a2 2 0 0 0 -2 2"/><path d="M9 8h6"/></svg></span><h3>Залікові книжки</h3><p>Всі оцінки, заліки та екзамени зібрані в одному місці — без паперових носіїв, завжди доступні онлайн для студента й викладача.</p></li><li class="card fcard"><span class="ficon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M13 5h8"/><path d="M13 9h5"/><path d="M13 15h8"/><path d="M13 19h5"/><path d="M3 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/><path d="M3 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z"/></svg></span><h3>Освітні програми</h3><p>Структурований перегляд усіх програм та освітніх компонентів — з відображенням опанованих і запланованих студентом дисциплін у зручному цифровому форматі.</p></li><li class="card fcard"><span class="ficon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 21h18"/><path d="M3 10h18"/><path d="M5 6l7 -3l7 3"/><path d="M4 10v11"/><path d="M20 10v11"/><path d="M8 14v3"/><path d="M12 14v3"/><path d="M16 14v3"/></svg></span><h3>ІАС</h3><p>Система адміністрування структурними підрозділами університету — управління посадами, працівниками та підрозділами в єдиному цифровому середовищі.</p></li><li class="card fcard"><span class="ficon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/><path d="M9 9h1"/><path d="M9 13h6"/><path d="M9 17h6"/></svg></span><h3>Цифровий документообіг</h3><p>Подання та підпис документів онлайн, без черг і затримок — у будь-який час, з будь-якого місця.</p></li><li class="card fcard"><span class="ficon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M8 9h8"/><path d="M8 13h6"/><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z"/></svg></span><h3>Корпоративний чат</h3><p>Безпечне цифрове середовище для внутрішнього спілкування — прозоро та з фокусом на ефективну взаємодію в університеті.</p></li><li class="card fcard"><span class="ficon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5"/><path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73"/><path d="M6 9h12"/><path d="M6 12h3"/><path d="M6 15h2"/></svg></span><h3>Підпис PDF</h3><p>Підпис документів безпосередньо на платформі — без друку, сканування чи сторонніх сервісів, зручно й офіційно в цифровому форматі.</p></li></ul></div></section>
+<section class="sec" id="integration"><div class="wrap">
+<div class="sec-h"><h2>Інтеграція сервісу в інший університет</h2><p>Процес інтеграції сервісу, що забезпечує плавне впровадження та адаптацію платформи до потреб університету з подальшою підтримкою і розвитком.</p></div>
+<ol class="steps-row"><li class="card scard"><span class="snum" aria-hidden="true">1</span><h3>Діагностика</h3><span class="chip chip-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>2–4 тижні</span><ul><li>Аналіз внутрішніх процесів університету.</li><li>Аудит даних та ІТ-інфраструктури.</li><li>Формування дорожньої карти впровадження.</li></ul></li><li class="card scard"><span class="snum" aria-hidden="true">2</span><h3>Технічна інтеграція</h3><span class="chip chip-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>4–8 тижнів</span><ul><li>Розгортання системи в хмарі або локально.</li><li>Інтеграція з державними сервісами.</li><li>Імпорт баз даних користувачів і навчальних програм.</li></ul></li><li class="card scard"><span class="snum" aria-hidden="true">3</span><h3>Адаптація під специфіку</h3><span class="chip chip-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>2–6 тижнів</span><ul><li>Налаштування ролей і рівнів доступу.</li><li>Створення індивідуальних шаблонів документів.</li><li>Підключення факультетів, підрозділів, коледжів.</li></ul></li><li class="card scard"><span class="snum" aria-hidden="true">4</span><h3>Навчання персоналу</h3><span class="chip chip-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>До 2 тижнів</span><ul><li>Проведення вебінарів і майстер-класів.</li><li>Надання інструкцій, відеогайдів та техпідтримки.</li></ul></li><li class="card scard"><span class="snum" aria-hidden="true">5</span><h3>Запуск і підтримка</h3><span class="chip chip-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>Безперервно</span><ul><li>Постійний моніторинг роботи системи.</li><li>Оновлення та вдосконалення функціоналу.</li></ul></li></ol></div></section>
+<section class="sec" id="contacts" style="padding-top:0"><div class="wrap">
+<div class="band"><div><h2>Зв’язатися з нами</h2><p>Маєте запитання щодо підключення платформи? Напишіть нам або зателефонуйте — допоможемо розібратися.</p></div>
+<div class="band-actions"><a class="btn btn-sec" href="mailto:it@kspu.edu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"/><path d="M3 7l9 6l9 -6"/></svg>Написати нам</a><a class="lnk" href="tel:+380963102636">+380 96 310 26 36</a></div></div>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap foot-in">
+<div><a class="logo" href="Main.dc.html" aria-label="KSU24 — на головну"><span class="logo-mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"/><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"/></svg></span><span>KSU24</span></a><p class="small muted">Херсонський державний університет</p></div>
+<ul class="foot-links"><li><a href="#main">Умови користування</a></li><li><a href="#main">Конфіденційність</a></li><li><a href="#main">Cookie</a></li></ul>
+<div class="foot-contact"><a href="mailto:it@kspu.edu">it@kspu.edu</a><a href="tel:+380963102636">+380 96 310 26 36</a></div>
+</div><div class="wrap copy small muted">© 1917–2026 Херсонський державний університет</div></footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 2500}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

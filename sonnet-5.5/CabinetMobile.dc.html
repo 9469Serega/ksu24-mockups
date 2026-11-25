@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KSU24 — Кабінет студента (мобільна версія)</title>
+<script src="./support.js"></script>
+<style>html{background:#E2E8F0}body{display:flex;justify-content:center;min-height:100vh}</style>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F8FAFC}
+.app{font-family:'Montserrat','Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:16px;line-height:1.5;color:#1E293B;background:#F8FAFC;-webkit-font-smoothing:antialiased}
+.app *{box-sizing:border-box}
+.app h1,.app h2,.app h3,.app p,.app ul,.app ol,.app dl,.app dd,.app figure{margin:0}
+.app ul,.app ol{padding:0;list-style:none}
+.app h1{font-size:30px;line-height:1.25;font-weight:700;color:#1E3A8A}
+.app h2{font-size:24px;line-height:1.3;font-weight:600;color:#1E3A8A}
+.app h3{font-size:18px;line-height:1.35;font-weight:500;color:#1E3A8A}
+.app a{color:#1E3A8A;text-underline-offset:3px}
+.app :focus-visible{outline:3px solid #1E3A8A;outline-offset:2px}
+.app .muted{color:#475569}
+.app .small{font-size:14px;line-height:1.45}
+.app .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.app .skip{position:absolute;left:8px;top:-72px;z-index:20;background:#FFFFFF;color:#1E3A8A;padding:12px 16px;border-radius:8px;border:2px solid #1E3A8A;font-weight:600}
+.app .skip:focus{top:8px}
+.app .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 20px;border-radius:8px;border:2px solid transparent;font-family:inherit;font-size:16px;font-weight:600;line-height:1.25;text-decoration:none;cursor:pointer;transition:background-color 200ms cubic-bezier(.2,0,0,1),border-color 200ms cubic-bezier(.2,0,0,1)}
+.app a.btn-cta,.app button.btn-cta{background:#F59E0B;border-color:#F59E0B;color:#1E293B}
+.app a.btn-cta:hover,.app button.btn-cta:hover{background:#D97706;border-color:#D97706;color:#1E293B}
+.app a.btn-sec,.app button.btn-sec{background:transparent;border-color:#1E3A8A;color:#1E3A8A}
+.app a.btn-sec:hover,.app button.btn-sec:hover{background:#DBEAFE;color:#1E3A8A}
+.app a.btn-txt,.app button.btn-txt{background:transparent;color:#1E3A8A;padding:10px 12px}
+.app a.btn-txt:hover,.app button.btn-txt:hover{background:#DBEAFE}
+.app .chip{display:inline-flex;align-items:center;gap:6px;min-height:28px;padding:2px 10px;border-radius:999px;font-size:14px;font-weight:600;line-height:1.3;white-space:nowrap}
+.app .chip-blue{background:#DBEAFE;color:#0F2042}
+.app .chip-amber{background:#FEF3C7;color:#451A03}
+.app .chip-neutral{background:#E2E8F0;color:#1E293B}
+.app .chip-outline{background:#FFFFFF;color:#B45309;border:1px solid #B45309}
+.app .card{background:#FFFFFF;border:1px solid #CBD5E1;border-radius:12px}
+.app .shadow{box-shadow:0 1px 2px rgba(0,0,0,.30),0 2px 6px 2px rgba(0,0,0,.15)}
+.app .logo{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;color:#1E3A8A;font-weight:700;font-size:20px}
+.app .logo-mark{width:36px;height:36px;border-radius:8px;background:#1E3A8A;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.app .logo-w,.app .topbar .logo-w{color:#FFFFFF}
+.app .logo-mark-w{background:#FFFFFF;color:#1E3A8A}
+.app .avatar{width:40px;height:40px;border-radius:999px;background:#DBEAFE;color:#0F2042;font-weight:700;font-size:14px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.app .field{width:100%;min-height:44px;padding:0 14px;border:1px solid #475569;border-radius:8px;font-family:inherit;font-size:16px;color:#1E293B;background:#FFFFFF}
+.app .field::placeholder{color:#475569;opacity:1}
+.app .field:focus{outline:3px solid #1E3A8A;outline-offset:1px;border-color:#1E3A8A}
+.app .lbl{display:block;font-size:14px;font-weight:600;color:#1E293B;margin-bottom:6px}
+@media (prefers-reduced-motion:reduce){.app *{transition:none!important;animation:none!important}}
+
+.app .m-top{background:#1E3A8A;color:#FFFFFF;height:60px;padding:8px 12px 8px 16px;display:flex;align-items:center;gap:8px;flex:none}
+.app .m-top a{color:#FFFFFF}
+.app .m-top :focus-visible{outline-color:#FFFFFF}
+.app .m-top .grow{flex:1}
+.app .iconbtn{position:relative;width:44px;height:44px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+.app .badge{position:absolute;top:0;right:-2px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:#FEF3C7;color:#451A03;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.app .m-scroll{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:16px}
+.app .m-scroll h1{font-size:25px}
+.app .card-h{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:16px 16px 12px}
+.app .card-h h2{font-size:21px}
+.app .pair{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;padding:12px 16px;border-top:1px solid #CBD5E1}
+.app .pair.now{background:#DBEAFE}
+.app .pair-time{display:flex;flex-direction:column;width:52px;flex:none;line-height:1.3}
+.app .pair-time b{font-weight:600}
+.app .pair-body{flex:1 1 140px;min-width:0}
+.app .pair-title{font-weight:600;line-height:1.35}
+.app .row{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;padding:12px 16px;border-top:1px solid #CBD5E1}
+.app .row-main{flex:1 1 150px;min-width:0}
+.app .row-title{font-weight:600;line-height:1.35}
+.app a.row-title{color:#1E3A8A}
+.app .score{font-size:20px;font-weight:600;color:#1E3A8A;min-width:32px;text-align:right}
+.app .ellip{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.app .unread{font-weight:700}
+.app .m-cta{padding:12px 16px 16px;border-top:1px solid #CBD5E1}
+.app .m-nav{flex:none;background:#FFFFFF;border-top:1px solid #CBD5E1;padding:6px 4px 10px}
+.app .m-nav ul{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+.app a.m-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:56px;padding:4px 2px;border-radius:12px;text-decoration:none;color:#475569;font-size:12px;font-weight:500;line-height:1.2}
+.app a.m-tab .ti{width:48px;height:28px;border-radius:999px;display:flex;align-items:center;justify-content:center}
+.app a.m-tab.cur{color:#1E3A8A;font-weight:700}
+.app a.m-tab.cur .ti{background:#DBEAFE}
+</style>
+</helmet>
+<div class="app" style="width:390px;height:844px;display:flex;flex-direction:column;overflow:hidden">
+<a class="skip" href="#main">Перейти до змісту</a>
+
+<header class="m-top"><a class="logo logo-w" href="Main.dc.html" aria-label="KSU24"><span class="logo-mark logo-mark-w"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6"/><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4"/></svg></span><span>KSU24</span></a><span class="grow"></span>
+<a class="iconbtn" href="#main" aria-label="Сповіщення: 3 нові"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6"/><path d="M9 17v1a3 3 0 0 0 6 0v-1"/></svg><span class="badge" aria-hidden="true">3</span></a>
+<a class="iconbtn" href="#main" aria-label="Профіль: Петро Іваненко"><span class="avatar" aria-hidden="true" style="width:36px;height:36px">ПІ</span></a></header>
+<main id="main" class="m-scroll">
+<div><h1>Доброго дня, Петре!</h1><p class="small muted">Понеділок, 23 листопада · група 361</p></div>
+<section class="card" aria-labelledby="m-sch"><div class="card-h"><h2 id="m-sch">Розклад на сьогодні</h2></div><ol><li class="pair now"><div class="pair-time"><b>11:50</b><span class="small muted">13:10</span></div><div class="pair-body"><p class="pair-title">Тестування ПЗ</p><p class="small muted">Лабораторна · ауд. 112</p></div><span class="chip chip-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>Зараз</span></li><li class="pair"><div class="pair-time"><b>13:30</b><span class="small muted">14:50</span></div><div class="pair-body"><p class="pair-title">Хмарні технології</p><p class="small muted">Лекція · ауд. 214</p></div></li></ol>
+<div class="m-cta"><a class="btn btn-cta" style="width:100%" href="#main"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M8 15h2v2h-2z"/></svg>Переглянути розклад</a></div></section>
+<section class="card" aria-labelledby="m-gr"><div class="card-h"><h2 id="m-gr">Останні оцінки</h2></div><ul><li class="row"><div class="row-main"><p class="row-title">Машинне навчання</p><p class="small muted">Модульна контрольна №2 · 21 листопада</p></div><span class="score" aria-label="92 балів">92</span><span class="chip chip-blue">A</span></li><li class="row"><div class="row-main"><p class="row-title">Проєктування інформаційних систем</p><p class="small muted">Лабораторна робота №6 · 20 листопада</p></div><span class="score" aria-label="78 балів">78</span><span class="chip chip-neutral">C</span></li><li class="row"><div class="row-main"><p class="row-title">Хмарні технології</p><p class="small muted">Тест за темою «Контейнеризація» · 18 листопада</p></div><span class="score" aria-label="85 балів">85</span><span class="chip chip-blue">B</span></li></ul></section>
+<section class="card" aria-labelledby="m-dc"><div class="card-h"><h2 id="m-dc">Документи</h2></div><ul><li class="row"><div class="row-main"><a class="row-title" href="#main">Заява на матеріальну допомогу</a><p class="small muted">Заява · № 2026/184 · 21.11.2026</p></div><span class="chip chip-amber"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></svg>На погодженні</span></li><li class="row"><div class="row-main"><a class="row-title" href="#main">Довідка про навчання</a><p class="small muted">Довідка · № 2026/171 · 18.11.2026</p></div><span class="chip chip-blue"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12l5 5l10 -10"/></svg>Затверджено</span></li></ul></section>
+<section class="card" aria-labelledby="m-ms"><div class="card-h"><h2 id="m-ms">Повідомлення</h2></div><ul><li class="row" style="flex-wrap:nowrap"><span class="avatar" aria-hidden="true">Д</span><div class="row-main"><p class="row-title ellip unread">Деканат факультету комп’ютерних наук</p><p class="small muted ellip">Оновлено графік консультацій перед сесією</p></div><span class="small muted">10:42</span></li><li class="row" style="flex-wrap:nowrap"><span class="avatar" aria-hidden="true">С</span><div class="row-main"><p class="row-title ellip unread">Староста групи 361</p><p class="small muted ellip">Нагадую: збори групи сьогодні о 15:00</p></div><span class="small muted">09:15</span></li></ul></section>
+</main>
+<nav class="m-nav" aria-label="Основна навігація"><ul><li><a class="m-tab cur" href="CabinetMobile.dc.html" aria-current="page"><span class="ti"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg></span><span>Головна</span></a></li><li><a class="m-tab" href="#main"><span class="ti"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M8 15h2v2h-2z"/></svg></span><span>Розклад</span></a></li><li><a class="m-tab" href="Gradebook.dc.html"><span class="ti"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M19 4v16h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12z"/><path d="M19 16h-12a2 2 0 0 0 -2 2"/><path d="M9 8h6"/></svg></span><span>Оцінки</span></a></li><li><a class="m-tab" href="Documents.dc.html"><span class="ti"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/><path d="M9 9h1"/><path d="M9 13h6"/><path d="M9 17h6"/></svg></span><span>Документи</span></a></li><li><a class="m-tab" href="#main"><span class="ti"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none"><path d="M8 9h8"/><path d="M8 13h6"/><path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12z"/></svg></span><span>Чат</span></a></li></ul></nav>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 390, "height": 844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

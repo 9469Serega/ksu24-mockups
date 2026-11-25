@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KSU24 — документообіг</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#1E3A8A}a:hover{color:#0F2042}
+</style>
+</helmet>
+<div style="font-family: Montserrat, Inter, Roboto, system-ui, sans-serif; color: #1E293B; background: #F8FAFC; line-height: 1.5; min-height: 1100px; display: flex; flex-wrap: wrap; align-items: stretch">
+
+  <aside style="flex: 1 1 260px; max-width: 100%; background: #FFFFFF; border-right: 1px solid #CBD5E1; padding: 20px 16px; display: flex; flex-direction: column; gap: 24px; box-sizing: border-box">
+    <a href="Main.dc.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #1E293B; padding: 4px 8px">
+      <span style="width: 40px; height: 40px; border-radius: 12px; background: #1E3A8A; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700">24</span>
+      <span style="font-weight: 700; font-size: 18px; color: #1E3A8A">KSU24</span>
+    </a>
+    <nav aria-label="Розділи кабінету" style="display: flex; flex-direction: column; gap: 4px; font-size: 15px; font-weight: 500">
+      <a href="Dashboard.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #1E293B; text-decoration: none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"></path></svg>Головна</a>
+      <a href="Gradebook.dc.html" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #1E293B; text-decoration: none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"></path><path d="M5 17a3 3 0 0 1 3-3h11"></path></svg>Залікова книжка</a>
+      <a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #1E293B; text-decoration: none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"></path><path d="M4 6h1M4 12h1M4 18h1"></path></svg>Освітня програма</a>
+      <a href="Documents.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; background: #DBEAFE; color: #0F2042; text-decoration: none; font-weight: 600"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg>Документи<span style="margin-left: auto; font-size: 12px; font-weight: 600; background: #FEF3C7; color: #451A03; padding: 2px 8px; border-radius: 999px">2</span></a>
+      <a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #1E293B; text-decoration: none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"></path></svg>Чат</a>
+      <a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 8px; color: #1E293B; text-decoration: none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"></path><path d="M14 4l4 4-9 9H5v-4z"></path></svg>Підпис PDF</a>
+    </nav>
+    <div style="margin-top: auto; display: flex; align-items: center; gap: 12px; padding: 12px; border-top: 1px solid #E2E8F0">
+      <span style="width: 40px; height: 40px; border-radius: 999px; background: #E2E8F0; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px">ОК</span>
+      <span style="display: flex; flex-direction: column; line-height: 1.3; font-size: 14px"><span style="font-weight: 600">Олена Коваль</span><span style="color: #475569; font-size: 13px">Група 361 · 4 курс</span></span>
+    </div>
+  </aside>
+
+  <main style="flex: 999 1 560px; min-width: 0; padding: 32px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between">
+      <div>
+        <nav aria-label="Навігаційний ланцюжок" style="font-size: 14px; color: #475569; margin-bottom: 6px"><a href="Dashboard.dc.html">Головна</a> / Документи</nav>
+        <h1 style="margin: 0; font-size: 30px; font-weight: 700; color: #1E3A8A">Цифровий документообіг</h1>
+      </div>
+      <button type="button" style="font: inherit; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; height: 48px; padding: 0 20px; border: 1.5px solid #1E3A8A; background: #FFFFFF; color: #1E3A8A; border-radius: 8px; cursor: pointer">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+        Подати документ
+      </button>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 8px">
+      <button type="button" aria-pressed="true" style="font: inherit; font-size: 14px; font-weight: 600; height: 40px; padding: 0 16px; border-radius: 999px; background: #1E3A8A; color: #FFFFFF; border: 1.5px solid #1E3A8A">Усі · 6</button>
+      <button type="button" aria-pressed="false" style="font: inherit; font-size: 14px; font-weight: 500; height: 40px; padding: 0 16px; border-radius: 999px; background: #FFFFFF; color: #1E293B; border: 1px solid #CBD5E1">Потрібен мій підпис · 2</button>
+      <button type="button" aria-pressed="false" style="font: inherit; font-size: 14px; font-weight: 500; height: 40px; padding: 0 16px; border-radius: 999px; background: #FFFFFF; color: #1E293B; border: 1px solid #CBD5E1">На затвердженні · 2</button>
+      <button type="button" aria-pressed="false" style="font: inherit; font-size: 14px; font-weight: 500; height: 40px; padding: 0 16px; border-radius: 999px; background: #FFFFFF; color: #1E293B; border: 1px solid #CBD5E1">Затверджено · 2</button>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start">
+      <section aria-label="Перелік документів" style="flex: 2 1 480px; min-width: 0; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; overflow: hidden">
+        <ul style="list-style: none; margin: 0; padding: 0">
+          <sc-for list="{{docs}}" as="d" hint-placeholder-count="6">
+            <li style="{{d.rowStyle}}">
+              <span style="width: 40px; height: 40px; flex: none; border-radius: 8px; background: #F1F5F9; color: #1E3A8A; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path></svg></span>
+              <span style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; line-height: 1.35">
+                <button type="button" onClick="{{d.pick}}" style="font: inherit; font-weight: 600; text-align: left; background: none; border: 0; padding: 0; color: #1E293B; cursor: pointer">{{d.title}}</button>
+                <span style="font-size: 13px; color: #475569">{{d.meta}}</span>
+              </span>
+              <span style="{{d.chipStyle}}">{{d.status}}</span>
+            </li>
+          </sc-for>
+        </ul>
+      </section>
+
+      <section aria-label="Маршрут погодження" style="flex: 1 1 320px; min-width: 0; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 20px">
+        <div>
+          <div style="font-size: 13px; color: #475569">Обраний документ</div>
+          <h2 style="margin: 2px 0 0; font-size: 20px; font-weight: 600">Заява на виробничу практику</h2>
+          <div style="font-size: 13px; color: #475569; margin-top: 4px">PDF · 214 КБ · від 17.11.2026</div>
+        </div>
+        <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+          <li style="display: flex; gap: 14px; padding-bottom: 18px; position: relative">
+            <span style="width: 28px; height: 28px; flex: none; border-radius: 999px; background: #1E3A8A; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg></span>
+            <span style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 600">Завідувач кафедри</span><span style="font-size: 13px; color: #475569">Факультет комп’ютерних наук · затверджено 17.11</span></span>
+          </li>
+          <li style="display: flex; gap: 14px; padding-bottom: 18px">
+            <span style="width: 28px; height: 28px; flex: none; border-radius: 999px; background: #F59E0B; color: #1E293B; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px">2</span>
+            <span style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 600">Студент — ваш підпис</span><span style="font-size: 13px; color: #B45309; font-weight: 600">Очікує зараз</span></span>
+          </li>
+          <li style="display: flex; gap: 14px; padding-bottom: 18px">
+            <span style="width: 28px; height: 28px; flex: none; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #64748B; color: #475569; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px; box-sizing: border-box">3</span>
+            <span style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 600">Декан</span><span style="font-size: 13px; color: #475569">Факультет комп’ютерних наук · далі</span></span>
+          </li>
+          <li style="display: flex; gap: 14px">
+            <span style="width: 28px; height: 28px; flex: none; border-radius: 999px; background: #FFFFFF; border: 1.5px solid #64748B; color: #475569; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px; box-sizing: border-box">4</span>
+            <span style="display: flex; flex-direction: column; line-height: 1.35"><span style="font-weight: 600">Проректор з навчальної роботи</span><span style="font-size: 13px; color: #475569">Ректорат · далі</span></span>
+          </li>
+        </ol>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <button type="button" style="font: inherit; font-weight: 600; font-size: 16px; height: 52px; border: 0; border-radius: 8px; background: #F59E0B; color: #1E293B; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"></path><path d="M14 4l4 4-9 9H5v-4z"></path></svg>Підписати документ</button>
+          <button type="button" style="font: inherit; font-weight: 600; font-size: 15px; height: 44px; border: 0; border-radius: 8px; background: transparent; color: #1E3A8A; cursor: pointer">Переглянути PDF</button>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { picked: 0 };
+  }
+  renderVals() {
+    const chips = {
+      sign: 'font-size: 12px; font-weight: 600; background: #FEF3C7; color: #451A03; padding: 4px 10px; border-radius: 999px; white-space: nowrap',
+      wait: 'font-size: 12px; font-weight: 600; background: #E2E8F0; color: #1E293B; padding: 4px 10px; border-radius: 999px; white-space: nowrap',
+      ok: 'font-size: 12px; font-weight: 600; background: #DBEAFE; color: #0F2042; padding: 4px 10px; border-radius: 999px; white-space: nowrap'
+    };
+    const list = [
+      { title: 'Заява на виробничу практику', meta: 'PDF · від 17.11.2026 · кафедра інформатики', status: 'Потрібен підпис', kind: 'sign' },
+      { title: 'Індивідуальний навчальний план', meta: 'PDF · від 02.09.2026 · деканат', status: 'Потрібен підпис', kind: 'sign' },
+      { title: 'Заява на перескладання', meta: 'PDF · від 12.11.2026 · деканат', status: 'На затвердженні', kind: 'wait' },
+      { title: 'Тема курсової роботи', meta: 'PDF · від 30.10.2026 · кафедра інформатики', status: 'На затвердженні', kind: 'wait' },
+      { title: 'Довідка з місця навчання', meta: 'PDF · від 05.11.2026 · відділ кадрів', status: 'Затверджено', kind: 'ok' },
+      { title: 'Договір про навчання', meta: 'PDF · від 25.08.2023 · приймальна комісія', status: 'Затверджено', kind: 'ok' }
+    ];
+    const rowBase = 'display: flex; align-items: center; gap: 14px; padding: 16px 20px; border-top: 1px solid #E2E8F0; ';
+    const docs = list.map((d, i) => ({
+      ...d,
+      chipStyle: chips[d.kind],
+      rowStyle: rowBase + (this.state.picked === i ? 'background: #F1F5F9; box-shadow: inset 3px 0 0 #1E3A8A' : 'background: #FFFFFF'),
+      pick: () => this.setState({ picked: i })
+    }));
+    return { docs };
+  }
+}
+</script>
+</body>
+</html>
